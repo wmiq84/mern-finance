@@ -11,9 +11,10 @@ export const store = configureStore({
 	reducer: { [api.reducerPath]: api.reducer },
 	middleware: (getDefault) => getDefault().concat(api.middleware),
 });
+setupListeners(store.dispatch);
 
 createRoot(document.getElementById('root')!).render(
-	<StrictMode>
+	<Provider store={store}>
 		<App />
-	</StrictMode>
+	</Provider>
 );

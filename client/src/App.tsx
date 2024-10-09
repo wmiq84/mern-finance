@@ -14,6 +14,7 @@ function App() {
 					{/* creates a constant starting point across browsers */}
 					<CssBaseline />
 					<Box width="100%" height="100%" padding="1rem 2rem 4rem 2rem">
+						<Navbar />
 						<Routes>
 							<Route path="/" element={<div>dashboard page</div>} />
 							<Route path="/predictions" element={<div>predictions page</div>} />
